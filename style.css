@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow: hidden;
+}
+.sun {
+  background: #FFFF08;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  box-shadow: 1px 2px 50px #FBFF00;
+  margin-left: 50px;
+  z-index: -1;
+}
+.mountain {
+  width: 100%;
+  height: 100px;
+  background: #7BC43E;
+  position: absolute; bottom: 0;
+}
+#clouds {
+  padding-top: 50px;
+  background: #93b7d3;
+  background: -webkit-linear-gradient(top, #93b7d3 0%, #e7eff5 75%);
+  background: -linear-gradient(top, #93b7d3 0%, #e7eff5 75%);
+  background: -moz-linear-gradient(top, #93b7d3 0%, #e7eff5 75%);
+}
+
+.cloud {
+  width: 205px;
+  height: 60px;
+  background: #fff;
+  border-radius: 200px;
+  position: relative;
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+}
+
+.cloud:before,
+.cloud:after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+  width: 120px;
+  height: 120px;
+  top: -55px;
+  left: auto;
+  right: 15px;
+}
+
+
+/*fastest cloud below - second in line*/
+
+.x1 {
+  left: 500px;
+  -webkit-animation: moveclouds 22s linear infinite;
+  -moz-animation: moveclouds 22s linear infinite;
+  -o-animation: moveclouds 22s linear infinite;
+  opacity: 1;
+}
+
+
+/*smallest cloud*/
+
+.x2 {
+  left: 500px;
+  top: -150px;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
+  opacity: 0.6;
+  -webkit-animation: moveclouds 50s linear infinite;
+  -moz-animation: moveclouds 50s linear infinite;
+  -o-animation: moveclouds 50s linear infinite;
+}
+/* cloud on top of sun, half of it is hidden*/
+.x3 {
+  left: 500px;
+  top: -300px;
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  transform: scale(1.5);
+  opacity: .5;
+  -webkit-animation: moveclouds 45s linear infinite;
+  -moz-animation: moveclouds 45s linear infinite;
+  -o-animation: moveclouds 45s linear infinite;
+}
+/*cloud goes over sun - smaller one*/
+.x4 {
+  left: 500px;
+  top: -205px;
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  transform: scale(0.75);
+  opacity: 0.75;
+  -webkit-animation: moveclouds 29s linear infinite;
+  -moz-animation: moveclouds 29s linear infinite;
+  -o-animation: moveclouds 29s linear infinite;
+}
+/*cloud next to white cloud that goes over sun*/
+.x5 {
+  left: 500px;
+  top: -280px;
+  -webkit-transform: scale(.75);
+  -moz-transform: scale(.75);
+  transform: scale(.75);
+  opacity: 0.6;
+  -webkit-animation: moveclouds 26s linear infinite;
+  -moz-animation: moveclouds 26s linear infinite;
+  -o-animation: moveclouds 26s linear infinite;
+}
+/*cloud barely touches sun*/
+.x6 {
+  left: 500px;
+  top: -400px;
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  transform: scale(1);
+  opacity: 0.3;
+  -webkit-animation: moveclouds 35s linear infinite;
+  -moz-animation: moveclouds 35s linear infinite;
+  -o-animation: moveclouds 35s linear infinite;
+}
+
+.x7 {
+  left: 500px;
+  top: -400px;
+  -webkit-transform: scale(0.65);
+  -moz-transform: scale(0.65);
+  transform: scale(0.65);
+  opacity: 0.65;
+  -webkit-animation: moveclouds 18s linear infinite;
+  -moz-animation: moveclouds 18s linear infinite;
+  -o-animation: moveclouds 18s linear infinite;
+}
+
+@-o-keyframes moveclouds {
+  0% {
+    margin-left: 800px;
+  }
+  100% {
+    margin-left: -800px;
+  }
+}
+
+@-webkit-keyframes moveclouds {
+  0% {
+    margin-left: 800px;
+  }
+  100% {
+    margin-left: -800px;
+  }
+}
+
+@-moz-keyframes moveclouds {
+  0% {
+    margin-left: 800px;
+  }
+  100% {
+    margin-left: -800px;
+  }
+}
